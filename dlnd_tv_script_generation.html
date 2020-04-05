@@ -13040,64 +13040,6 @@ ul.typeahead-list  > li > a.pull-right {
 .highlight .vm { color: #19177C } /* Name.Variable.Magic */
 .highlight .il { color: #666666 } /* Literal.Number.Integer.Long */
     </style>
-<style type="text/css">
-    
-/* Temporary definitions which will become obsolete with Notebook release 5.0 */
-.ansi-black-fg { color: #3E424D; }
-.ansi-black-bg { background-color: #3E424D; }
-.ansi-black-intense-fg { color: #282C36; }
-.ansi-black-intense-bg { background-color: #282C36; }
-.ansi-red-fg { color: #E75C58; }
-.ansi-red-bg { background-color: #E75C58; }
-.ansi-red-intense-fg { color: #B22B31; }
-.ansi-red-intense-bg { background-color: #B22B31; }
-.ansi-green-fg { color: #00A250; }
-.ansi-green-bg { background-color: #00A250; }
-.ansi-green-intense-fg { color: #007427; }
-.ansi-green-intense-bg { background-color: #007427; }
-.ansi-yellow-fg { color: #DDB62B; }
-.ansi-yellow-bg { background-color: #DDB62B; }
-.ansi-yellow-intense-fg { color: #B27D12; }
-.ansi-yellow-intense-bg { background-color: #B27D12; }
-.ansi-blue-fg { color: #208FFB; }
-.ansi-blue-bg { background-color: #208FFB; }
-.ansi-blue-intense-fg { color: #0065CA; }
-.ansi-blue-intense-bg { background-color: #0065CA; }
-.ansi-magenta-fg { color: #D160C4; }
-.ansi-magenta-bg { background-color: #D160C4; }
-.ansi-magenta-intense-fg { color: #A03196; }
-.ansi-magenta-intense-bg { background-color: #A03196; }
-.ansi-cyan-fg { color: #60C6C8; }
-.ansi-cyan-bg { background-color: #60C6C8; }
-.ansi-cyan-intense-fg { color: #258F8F; }
-.ansi-cyan-intense-bg { background-color: #258F8F; }
-.ansi-white-fg { color: #C5C1B4; }
-.ansi-white-bg { background-color: #C5C1B4; }
-.ansi-white-intense-fg { color: #A1A6B2; }
-.ansi-white-intense-bg { background-color: #A1A6B2; }
-
-.ansi-bold { font-weight: bold; }
-
-    </style>
-<style type="text/css">
-    body[data-notebook-name] > #header #header-container:not(.show-panel), /* body has data-notebook-name attribute when 
-a notebook is open. this rule won't be applied when the notebook is not open (in 404 view for example) */
-body[data-notebook-name] #menubar-container #maintoolbar:not(.show-panel),
-body[data-notebook-name] #menubar-container ul.navbar-nav:not(.show-panel) {
-  display: none;
-}
-
-#menubar.only-panel #menus.navbar-default {
-    background: #fff;
-    border-color: #fff;
-}
-
-.toolbar.with-statusbar{
-    margin-top: 3px;
-    margin-bottom: 0;
-}
-
-    </style>
 
 
 <style type="text/css">
@@ -13131,7 +13073,7 @@ div#notebook {
 
 <!-- Loading mathjax macro -->
 <!-- Load mathjax -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS_HTML"></script>
     <!-- MathJax configuration -->
     <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
@@ -13325,7 +13267,7 @@ george: are, are you sure this is decaf? wheres the orange indicator?
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">problem_unittests</span> <span class="k">as</span> <span class="nn">tests</span>
-<span class="kn">from</span> <span class="nn">collections</span> <span class="k">import</span> <span class="n">Counter</span>
+<span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">Counter</span>
 
 <span class="k">def</span> <span class="nf">create_lookup_tables</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
@@ -13571,7 +13513,7 @@ sequence_length = 4</code></pre>
 <div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">torch.utils.data</span> <span class="k">import</span> <span class="n">TensorDataset</span><span class="p">,</span> <span class="n">DataLoader</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">torch.utils.data</span> <span class="kn">import</span> <span class="n">TensorDataset</span><span class="p">,</span> <span class="n">DataLoader</span>
 
 <span class="k">def</span> <span class="nf">batch_data</span><span class="p">(</span><span class="n">words</span><span class="p">,</span> <span class="n">sequence_length</span><span class="p">,</span> <span class="n">batch_size</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
@@ -13750,7 +13692,7 @@ out = output[:, -1]</code></pre>
 
 <span class="k">class</span> <span class="nc">RNN</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
     
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">vocab_size</span><span class="p">,</span> <span class="n">output_size</span><span class="p">,</span> <span class="n">embedding_dim</span><span class="p">,</span> <span class="n">hidden_dim</span><span class="p">,</span> <span class="n">n_layers</span><span class="p">,</span> <span class="n">dropout</span><span class="o">=</span><span class="mf">0.5</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">vocab_size</span><span class="p">,</span> <span class="n">output_size</span><span class="p">,</span> <span class="n">embedding_dim</span><span class="p">,</span> <span class="n">hidden_dim</span><span class="p">,</span> <span class="n">n_layers</span><span class="p">,</span> <span class="n">dropout</span><span class="o">=</span><span class="mf">0.5</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Initialize the PyTorch RNN Module</span>
 <span class="sd">        :param vocab_size: The number of input dimensions of the neural network (the size of the vocabulary)</span>
@@ -14230,7 +14172,10 @@ Model Trained and Saved
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Answer:</strong> (Write answer, here)</p>
+<h3 id="Answer:">Answer:<a class="anchor-link" href="#Answer:">&#182;</a></h3><p>The <strong>embedding dim</strong> is inspired by the values used during the previous lectures and the dimensions used by other pretrained word embedding such as Glove (<a href="https://nlp.stanford.edu/projects/glove/">https://nlp.stanford.edu/projects/glove/</a>). They achieved a good accuracy so I took them as reference. 
+By testing different values for the <strong>hidden dim</strong> I realized that 256 is already big enough to capture patterns in the data and to avoid underfitting. Futhermore, the <strong>number of hidden layers</strong> is set to 3 and not higher in order to keep the complexity of the training small.</p>
+<p>I choosed a quite high <strong>sequence_length</strong> of 50 because I realized that this value still works quite good to get a loss &lt; 3.5. However, I don't think that words very far in the "past" to the predicting word should have a real influence to the prediction. Luckily, due to the gradient calculation their impact on the prediction will quite small.</p>
+<p>A <strong>batch size</strong> of 12 seems to be big enough to reduce the noise in the data.</p>
 
 </div>
 </div>
@@ -14276,7 +14221,7 @@ Model Trained and Saved
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="prompt input_prompt">In&nbsp;[106]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
@@ -14491,15 +14436,405 @@ jerry:(yelling george) : hey,
 </div>
 </div>
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>A comparison with the usage of pretrained word embeddings will be added soon...</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Using-pre-trained-word-vectors-from-GloVe-project">Using pre-trained word vectors from GloVe project<a class="anchor-link" href="#Using-pre-trained-word-vectors-from-GloVe-project">&#182;</a></h1>
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[92]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">get_glove_vectors</span><span class="p">(</span><span class="n">vocab_to_ints</span><span class="p">):</span>
+    
+    <span class="c1"># create word_vec based on glove vectors</span>
+    <span class="n">glove_word_vector</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="n">word_ints_vector</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;data/glove.42B.300d.txt&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">f</span><span class="p">:</span>
+            <span class="n">word</span><span class="p">,</span> <span class="n">vec</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+            <span class="n">glove_word_vector</span><span class="p">[</span><span class="n">word</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">fromstring</span><span class="p">(</span><span class="n">vec</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+            <span class="c1">#if word in vocab_to_ints.keys():</span>
+            <span class="c1">#    word_ints_vector[vocab_to_ints[word]] = np.fromstring(vec, sep=&#39; &#39;)</span>
+            <span class="c1">#else:</span>
+            <span class="c1">#    word_ints_vector[vocab_to_ints[word]] = np.random.uniform(-1, 1, 300)</span>
+            
+    <span class="k">for</span> <span class="n">word</span><span class="p">,</span> <span class="n">word_int</span> <span class="ow">in</span> <span class="n">vocab_to_ints</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="k">if</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">glove_word_vector</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+            <span class="n">word_ints_vector</span><span class="p">[</span><span class="n">word_int</span><span class="p">]</span> <span class="o">=</span> <span class="n">glove_word_vector</span><span class="p">[</span><span class="n">word</span><span class="p">]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">word_ints_vector</span><span class="p">[</span><span class="n">word_int</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="o">-</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mi">300</span><span class="p">)</span>
+                  
+    <span class="k">return</span> <span class="n">word_ints_vector</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[98]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">## Adjusted model definition</span>
+<span class="kn">import</span> <span class="nn">torch</span>
+<span class="kn">from</span> <span class="nn">torch</span> <span class="kn">import</span> <span class="n">nn</span>
+
+<span class="k">class</span> <span class="nc">GloveRNN</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
+    
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">vocab_size</span><span class="p">,</span> <span class="n">output_size</span><span class="p">,</span> <span class="n">embedding_dim</span><span class="p">,</span> <span class="n">hidden_dim</span><span class="p">,</span> <span class="n">n_layers</span><span class="p">,</span> <span class="n">dropout</span><span class="o">=</span><span class="mf">0.5</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Initialize the PyTorch RNN Module</span>
+<span class="sd">        :param vocab_size: The number of input dimensions of the neural network (the size of the vocabulary)</span>
+<span class="sd">        :param output_size: The number of output dimensions of the neural network</span>
+<span class="sd">        :param embedding_dim: The size of embeddings, should you choose to use them        </span>
+<span class="sd">        :param hidden_dim: The size of the hidden layer outputs</span>
+<span class="sd">        :param dropout: dropout to add in between LSTM/GRU layers</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">GloveRNN</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+        <span class="c1"># TODO: Implement function</span>
+        
+        <span class="c1"># set class variables</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">output_size</span> <span class="o">=</span> <span class="n">output_size</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">embedding_size</span> <span class="o">=</span> <span class="n">embedding_dim</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">n_hidden</span> <span class="o">=</span> <span class="n">hidden_dim</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">num_lstm_layers</span> <span class="o">=</span> <span class="n">n_layers</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">drop_prob</span> <span class="o">=</span> <span class="n">dropout</span>
+        
+        <span class="c1"># define model layers</span>
+        
+        <span class="bp">self</span><span class="o">.</span><span class="n">lstm</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">LSTM</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">embedding_size</span><span class="p">,</span> <span class="n">hidden_size</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">n_hidden</span><span class="p">,</span> 
+                            <span class="n">num_layers</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">num_lstm_layers</span><span class="p">,</span> <span class="n">dropout</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">drop_prob</span><span class="p">,</span> <span class="n">batch_first</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    
+        <span class="bp">self</span><span class="o">.</span><span class="n">dropout</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Dropout</span><span class="p">(</span><span class="n">dropout</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">fc</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">n_hidden</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">output_size</span><span class="p">)</span>
+    
+    <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">embeddings</span><span class="p">,</span> <span class="n">hidden</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Forward propagation of the neural network</span>
+<span class="sd">        :param nn_input: The input to the neural network</span>
+<span class="sd">        :param hidden: The hidden state        </span>
+<span class="sd">        :return: Two Tensors, the output of the neural network and the latest hidden state</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># TODO: Implement function   </span>
+        <span class="n">r_out</span> <span class="p">,</span> <span class="n">hidden</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">lstm</span><span class="p">(</span><span class="n">embeddings</span><span class="o">.</span><span class="n">double</span><span class="p">(),</span> <span class="n">hidden</span><span class="p">)</span>
+        
+        <span class="n">r_out</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">dropout</span><span class="p">(</span><span class="n">r_out</span><span class="p">)</span>
+        
+        <span class="c1"># stackup lstm outputs</span>
+        <span class="n">r_out</span> <span class="o">=</span> <span class="n">r_out</span><span class="o">.</span><span class="n">contiguous</span><span class="p">()</span><span class="o">.</span><span class="n">view</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">n_hidden</span><span class="p">)</span>
+        
+        <span class="n">out</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">fc</span><span class="p">(</span><span class="n">r_out</span><span class="p">)</span>
+        
+        <span class="c1"># return one batch of output word scores and the hidden state</span>
+        <span class="c1"># reshape into (batch_size, seq_length, output_size)</span>
+        <span class="n">out</span> <span class="o">=</span> <span class="n">out</span><span class="o">.</span><span class="n">view</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">embeddings</span><span class="p">),</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">output_size</span><span class="p">)</span>
+        <span class="c1"># get last batch</span>
+        <span class="n">out</span> <span class="o">=</span> <span class="n">out</span><span class="p">[:,</span> <span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+        
+        <span class="k">return</span> <span class="n">out</span><span class="p">,</span> <span class="n">hidden</span>
+    
+    
+    <span class="k">def</span> <span class="nf">init_hidden</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">batch_size</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Initialize the hidden state of an LSTM/GRU</span>
+<span class="sd">        :param batch_size: The batch_size of the hidden state</span>
+<span class="sd">        :return: hidden state of dims (n_layers, batch_size, hidden_dim)</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="c1"># Implement function</span>
+        
+        <span class="c1"># initialize hidden state with zero weights, and move to GPU if available</span>
+        
+        <span class="n">weight</span> <span class="o">=</span> <span class="nb">next</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">parameters</span><span class="p">())</span><span class="o">.</span><span class="n">data</span>
+        
+        <span class="k">if</span> <span class="p">(</span><span class="n">train_on_gpu</span><span class="p">):</span>
+            <span class="n">hidden</span> <span class="o">=</span> <span class="p">(</span><span class="n">weight</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">num_lstm_layers</span><span class="p">,</span> <span class="n">batch_size</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">n_hidden</span><span class="p">)</span><span class="o">.</span><span class="n">zero_</span><span class="p">()</span><span class="o">.</span><span class="n">cuda</span><span class="p">(),</span>
+                  <span class="n">weight</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">num_lstm_layers</span><span class="p">,</span> <span class="n">batch_size</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">n_hidden</span><span class="p">)</span><span class="o">.</span><span class="n">zero_</span><span class="p">()</span><span class="o">.</span><span class="n">cuda</span><span class="p">())</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">hidden</span> <span class="o">=</span> <span class="p">(</span><span class="n">weight</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">num_lstm_layers</span><span class="p">,</span> <span class="n">batch_size</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">n_hidden</span><span class="p">)</span><span class="o">.</span><span class="n">zero_</span><span class="p">(),</span>
+                      <span class="n">weight</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">num_lstm_layers</span><span class="p">,</span> <span class="n">batch_size</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">n_hidden</span><span class="p">)</span><span class="o">.</span><span class="n">zero_</span><span class="p">())</span>
+        <span class="k">return</span> <span class="n">hidden</span>
+    
+<span class="n">word_vectors</span> <span class="o">=</span> <span class="n">get_glove_vectors</span><span class="p">(</span><span class="n">vocab_to_int</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[99]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">vocab_to_int</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">word_vectors</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>21388
+21388
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[103]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">torch.utils.data</span> <span class="kn">import</span> <span class="n">TensorDataset</span><span class="p">,</span> <span class="n">DataLoader</span>
+
+<span class="k">def</span> <span class="nf">glove_batch_data</span><span class="p">(</span><span class="n">words</span><span class="p">,</span> <span class="n">word_ints_vector</span><span class="p">,</span> <span class="n">sequence_length</span><span class="p">,</span> <span class="n">batch_size</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Batch the neural network data using DataLoader</span>
+<span class="sd">    :param words: The word ids of the TV scripts</span>
+<span class="sd">    :param sequence_length: The sequence length of each batch</span>
+<span class="sd">    :param batch_size: The size of each batch; the number of sequences in a batch</span>
+<span class="sd">    :return: DataLoader with batched data</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># TODO: Implement function</span>
+    <span class="n">embedding_dim</span> <span class="o">=</span> <span class="mi">300</span> <span class="c1"># as predefined by Glove vectors</span>
+    
+    <span class="n">num_sequences</span> <span class="o">=</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">words</span><span class="p">)</span><span class="o">//</span><span class="n">sequence_length</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span>  <span class="c1"># ensure integer</span>
+    <span class="n">features</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">num_sequences</span><span class="p">,</span> <span class="n">sequence_length</span><span class="p">,</span> <span class="n">embedding_dim</span><span class="p">))</span>
+    <span class="n">targets</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">num_sequences</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">int</span><span class="p">)</span>
+    
+    <span class="k">for</span> <span class="n">idx</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num_sequences</span><span class="p">):</span> 
+        <span class="n">features</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">word_ints_vector</span><span class="p">[</span><span class="n">word_int</span><span class="p">]</span> <span class="k">for</span> <span class="n">word_int</span> <span class="ow">in</span> <span class="n">words</span><span class="p">[(</span><span class="n">idx</span><span class="o">*</span><span class="n">sequence_length</span><span class="p">):((</span><span class="n">idx</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="n">sequence_length</span><span class="p">)]]</span>
+        <span class="n">targets</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span> <span class="o">=</span> <span class="n">words</span><span class="p">[((</span><span class="n">idx</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="n">sequence_length</span><span class="p">)]</span>
+    
+    <span class="n">data</span> <span class="o">=</span> <span class="n">TensorDataset</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">from_numpy</span><span class="p">(</span><span class="n">features</span><span class="p">),</span> <span class="n">torch</span><span class="o">.</span><span class="n">from_numpy</span><span class="p">(</span><span class="n">targets</span><span class="p">))</span>
+    <span class="n">data_loader</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">DataLoader</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">shuffle</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                                          <span class="n">batch_size</span><span class="o">=</span><span class="n">batch_size</span><span class="p">)</span>
+      
+    <span class="c1"># return a dataloader</span>
+    <span class="k">return</span> <span class="n">data_loader</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Hyperparameter-settings">Hyperparameter settings<a class="anchor-link" href="#Hyperparameter-settings">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[104]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Data params</span>
+<span class="c1"># Sequence Length</span>
+<span class="n">sequence_length</span> <span class="o">=</span> <span class="mi">50</span>  <span class="c1"># of words in a sequence</span>
+<span class="c1"># Batch Size</span>
+<span class="n">batch_size</span> <span class="o">=</span> <span class="mi">12</span>
+
+<span class="c1"># data loader - do not change</span>
+<span class="n">train_loader</span> <span class="o">=</span> <span class="n">glove_batch_data</span><span class="p">(</span><span class="n">int_text</span><span class="p">,</span> <span class="n">word_vectors</span><span class="p">,</span> <span class="n">sequence_length</span><span class="p">,</span> <span class="n">batch_size</span><span class="p">)</span>
+
+<span class="c1"># Training parameters</span>
+<span class="c1"># Number of Epochs</span>
+<span class="n">num_epochs</span> <span class="o">=</span> <span class="mi">20</span>
+<span class="c1"># Learning Rate</span>
+<span class="n">learning_rate</span> <span class="o">=</span> <span class="mf">0.001</span>
+
+<span class="c1"># Model parameters</span>
+<span class="c1"># Vocab size</span>
+<span class="n">vocab_size</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">vocab_to_int</span><span class="p">)</span>
+<span class="c1"># Output size</span>
+<span class="n">output_size</span> <span class="o">=</span> <span class="n">vocab_size</span>
+<span class="c1"># Embedding Dimension</span>
+<span class="n">embedding_dim</span> <span class="o">=</span> <span class="mi">300</span>
+<span class="c1"># Hidden Dimension</span>
+<span class="n">hidden_dim</span> <span class="o">=</span> <span class="mi">256</span>
+<span class="c1"># Number of RNN Layers</span>
+<span class="n">n_layers</span> <span class="o">=</span> <span class="mi">3</span>
+
+<span class="c1"># Show stats for every n number of batches</span>
+<span class="n">show_every_n_batches</span> <span class="o">=</span> <span class="mi">500</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[105]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">DON&#39;T MODIFY ANYTHING IN THIS CELL</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="c1"># create model and move to gpu if available</span>
+<span class="n">glove_rnn</span> <span class="o">=</span> <span class="n">GloveRNN</span><span class="p">(</span><span class="n">vocab_size</span><span class="p">,</span> <span class="n">output_size</span><span class="p">,</span> <span class="n">embedding_dim</span><span class="p">,</span> <span class="n">hidden_dim</span><span class="p">,</span> <span class="n">n_layers</span><span class="p">,</span> <span class="n">dropout</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+<span class="n">glove_rnn</span> <span class="o">=</span> <span class="n">glove_rnn</span><span class="o">.</span><span class="n">double</span><span class="p">()</span>
+<span class="k">if</span> <span class="n">train_on_gpu</span><span class="p">:</span>
+    <span class="n">glove_rnn</span><span class="o">.</span><span class="n">cuda</span><span class="p">()</span>
+
+<span class="c1"># defining loss and optimization functions for training</span>
+<span class="n">optimizer</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">optim</span><span class="o">.</span><span class="n">Adam</span><span class="p">(</span><span class="n">glove_rnn</span><span class="o">.</span><span class="n">parameters</span><span class="p">(),</span> <span class="n">lr</span><span class="o">=</span><span class="n">learning_rate</span><span class="p">)</span>
+<span class="n">criterion</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">CrossEntropyLoss</span><span class="p">()</span>
+
+<span class="c1"># training the model</span>
+<span class="n">trained_rnn</span> <span class="o">=</span> <span class="n">train_rnn</span><span class="p">(</span><span class="n">glove_rnn</span><span class="p">,</span> <span class="n">batch_size</span><span class="p">,</span> <span class="n">optimizer</span><span class="p">,</span> <span class="n">criterion</span><span class="p">,</span> <span class="n">num_epochs</span><span class="p">,</span> <span class="n">show_every_n_batches</span><span class="p">)</span>
+
+<span class="c1"># saving the trained model</span>
+<span class="n">helper</span><span class="o">.</span><span class="n">save_model</span><span class="p">(</span><span class="s1">&#39;./save/trained_glove_rnn&#39;</span><span class="p">,</span> <span class="n">trained_rnn</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Model Trained and Saved&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Training for 20 epoch(s)...
+Epoch:    1/20    Loss: 6.32219126759493
+
+Epoch:    1/20    Loss: 5.599905266857836
+
+Epoch:    2/20    Loss: 5.281375842626981
+
+Epoch:    2/20    Loss: 5.107194043246717
+
+Epoch:    3/20    Loss: 5.036561946799088
+
+Epoch:    3/20    Loss: 4.881101545209989
+
+Epoch:    4/20    Loss: 4.840686637168656
+
+Epoch:    4/20    Loss: 4.758278608121711
+
+Epoch:    5/20    Loss: 4.70096238025711
+
+Epoch:    5/20    Loss: 4.701651614299276
+
+Epoch:    6/20    Loss: 4.631615632871027
+
+Epoch:    6/20    Loss: 4.563551393152087
+
+Epoch:    7/20    Loss: 4.507075716515356
+
+Epoch:    7/20    Loss: 4.483916304395651
+
+Epoch:    8/20    Loss: 4.434409554633787
+
+Epoch:    8/20    Loss: 4.4035191070631114
+
+Epoch:    9/20    Loss: 4.340056381222547
+
+Epoch:    9/20    Loss: 4.281215582795143
+
+Epoch:   10/20    Loss: 4.259521946715383
+
+Epoch:   10/20    Loss: 4.220625601483118
+
+Epoch:   11/20    Loss: 4.191635614980639
+
+Epoch:   11/20    Loss: 4.112893624149812
+
+Epoch:   12/20    Loss: 4.065178241853782
+
+Epoch:   12/20    Loss: 4.076109176837574
+
+Epoch:   13/20    Loss: 3.995288503786491
+
+Epoch:   13/20    Loss: 4.011496641378219
+
+Epoch:   14/20    Loss: 3.936510197752325
+
+Epoch:   14/20    Loss: 3.9033509357760194
+
+Epoch:   15/20    Loss: 3.85271520535771
+
+Epoch:   15/20    Loss: 3.850430204657602
+
+Epoch:   16/20    Loss: 3.809191301566081
+
+Epoch:   16/20    Loss: 3.776118854278436
+
+Epoch:   17/20    Loss: 3.7121867588697754
+
+Epoch:   17/20    Loss: 3.7166791684867935
+
+Epoch:   18/20    Loss: 3.6623978475022785
+
+Epoch:   18/20    Loss: 3.627019806135304
+
+Epoch:   19/20    Loss: 3.612746062715078
+
+Epoch:   19/20    Loss: 3.571102808122454
+
+Epoch:   20/20    Loss: 3.4990434792736056
+
+Epoch:   20/20    Loss: 3.526800892907259
+
+Model Trained and Saved
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>/Users/nielspetersen/opt/anaconda3/envs/development/lib/python3.7/site-packages/torch/serialization.py:360: UserWarning: Couldn&#39;t retrieve source code for container of type GloveRNN. It won&#39;t be checked for correctness upon loading.
+  &#34;type &#34; + obj.__name__ + &#34;. It won&#39;t be checked &#34;
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
